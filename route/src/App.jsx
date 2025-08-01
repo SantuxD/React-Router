@@ -8,25 +8,26 @@ import Policy from "./components/Policy";
 import Term from "./components/Term";
 import Navlink from "./components/Navlink";
 import Login from "./Auth/Login";
+import PagenotFound from "./components/PagenotFound";
+import { Navigate } from "react-router";
 
 function App() {
-  return <>
-  <BrowserRouter>
-  <Navlink/>
- 
-   <Routes>
-    <Route path="/" element ={<Home/>}/>
-    <Route path="/Contactme" element = {<Contactme/>}/>
-    <Route path="/Policy" element = {<Policy/>}/>
-    <Route path = "/Term" element = {<Term/>}/>
+  return (
+    <>
+      <BrowserRouter>
+        <Navlink />
 
-    
- 
-
-   </Routes>
-   
-  </BrowserRouter>
-  </>;
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Contactme" element={<Contactme />} />
+          <Route path="/Policy" element={<Policy />} />
+          <Route path="/Term" element={<Term />} />
+          {/* <Route path="/*" element={<PagenotFound />} /> */}
+          <Route path="/*" element={<Navigate to = "/" />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
