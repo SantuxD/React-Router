@@ -12,7 +12,7 @@ const Login = () => {
 
   // }
   const Handelpassword =(event)=>{
-    console.log("Your passwor is ", password)
+    console.log("Your password is ", password)
     setPassword(event.target.value)
   }
   const Handelsubmit =(event)=>{
@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <>
        
-        <h1>Login from</h1>
+        <h1 style={{color: "red"}}>Login from</h1>
        <form onClick={Handelsubmit}>
         <input
           onChange={Handelemail}

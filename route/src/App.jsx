@@ -12,8 +12,8 @@ import Login from "./Auth/Login";
 function App() {
   return <>
   <BrowserRouter>
-  {/* <Navlink/> */}
-  <Login/>
+  <Navlink/>
+ 
    <Routes>
     <Route path="/" element ={<Home/>}/>
     <Route path="/Contactme" element = {<Contactme/>}/>
